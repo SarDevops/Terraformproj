@@ -17,13 +17,6 @@ resource "azurerm_subnet" "example" {
   address_prefixes     = ["10.0.2.0/24"]
 }
 
-resource "azurerm_subnet" "example1" {
-  name                 = "Testing-subnet-2"
-  resource_group_name  = azurerm_resource_group.myinfra.name
-  virtual_network_name = azurerm_virtual_network.example.name
-  address_prefixes     = ["10.0.4.0/24"]
-}
-
 resource "azurerm_public_ip" "public_ip" {
   name                = "TestPublicIp1"
   location            = azurerm_resource_group.myinfra.location
